@@ -1,0 +1,22 @@
+{
+  "name": "readme-genorator",
+  "version": "1.0.0",
+  "description": "An application to dynamically generate Readme files for a developers projects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sxz1alpha/readme-genorator.git"
+  },
+  "author": "Adrian J Ulibarri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sxz1alpha/readme-genorator/issues"
+  },
+  "homepage": "https://github.com/sxz1alpha/readme-genorator#readme",
+  "dependencies": {
+    "inquirer": "^8.0.0"
+  }
+}
