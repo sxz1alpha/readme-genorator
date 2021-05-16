@@ -74,17 +74,42 @@ const promptUser = () => {
         
         //credits section
         {
+            type: 'confirm',
+            name: 'colab',
+            message: 'Would you like to add a colaborator?'
             // colaborator and link to profile on github
-            //asset, creator, and link to primary web presence
-            // tutorials used, link
         },
+
+ 
+        //asset, creator, and link to primary web presence
+        // tutorials used, link
+        
         // license(s) section
         {
-            //give a list of license's to chose from
+            type: 'checkbox',
+            name: 'license',
+            message: 'Please select a license option.',
+            choices: ['', '', '', '']
         },
         //badges section
         {
-            
+            type: 'confirm',
+            name: 'badgeConfirm',
+            message: 'Would you like to add some badges?',
+            default: true
+        },
+        {
+            type: 'checkbox',
+            name: 'badge',
+            message: 'Please select the badge(s) you would like to add!',
+            choices: ['','',''],
+            when: ({ badgeConfirm }) => {
+                if (badgeConfirm) {
+                    return true;
+                } else { 
+                    return false;
+                }
+            }
         },
         // features section
         {
@@ -100,7 +125,10 @@ const promptUser = () => {
         }
     ])
 }
-
+const colaborators = () => {
+    
+    promptUser(colabData);
+}
 const questions = [];
 
 // TODO: Create a function to write README file
