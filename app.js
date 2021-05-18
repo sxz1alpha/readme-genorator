@@ -1,7 +1,9 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const { promptTable, generateTable } = require('./develop/generate-table')
+const { promptTable, generateTable } = require('./develop/generate-table');
+const { promptColab, generateColab } = require('./develop/generate-colab');
+const { license } = require('./Develop/generate-license');
 // const generateReadme = require('./readme-template')
 
 
@@ -91,7 +93,9 @@ function init() {}
 // Function call to initialize app
 promptUser()
     .then(readmeData => promptTable(readmeData))
-    .then(tableData => console.log(tableData))
+    .then(tableData => promptColab(tableData))
+    .then(colabData => license(colabData))
+    .then(licenseData => console.log(licenseData))
         // .then(readmeData => {
     //     const readmePage = generateReadme(readmeData);
 
