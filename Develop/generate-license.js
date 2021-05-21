@@ -1,7 +1,7 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 
-const license = (currentData) => {
+const license = (newData) => {
     console.log(`
     ====================================
     ==========License Section!==========
@@ -20,8 +20,10 @@ const license = (currentData) => {
         }
     ])
     .then(licenseData => {
-        newData.license.push(licenseData);
+        if(licenseData) {
+        newData.license.push(licenseData)
         return newData;
+        }
     })
 };
 

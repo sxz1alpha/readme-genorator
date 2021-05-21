@@ -1,7 +1,8 @@
 // table of contents section
 
 const fs = require('fs');
-const inquirer = require('inquirer')
+const inquirer = require('inquirer');
+const { stringify } = require('querystring');
 
 //prompts the user to generate a table of contents item
 const promptTable = (currentData) => {
@@ -24,17 +25,17 @@ const promptTable = (currentData) => {
        if(tableData.confirmTable) {
        return generateTable(newData)
        } else {
-           console.log(tableData)
             return tableData;
        }
-    });           
-}
+    })           
+};
+
 
 
 
 // generates the table of contents items
 const generateTable = (newData) => {
-    console.log(newData)
+    
     // renames the data for the local scope of the function
     if (!newData.table) {
         newData.table = [];
@@ -54,12 +55,12 @@ const generateTable = (newData) => {
             default: true,             
         }
     ])
+   // make it return the string
     .then (tableData => {
         newData.table.push(tableData);
         if (tableData.confirmAddTable) {
             return generateTable(newData);
         } else {
-            console.log(newData);
             return newData;
         }
     })

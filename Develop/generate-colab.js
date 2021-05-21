@@ -22,7 +22,6 @@ const promptColab = (currentData) => {
        if(colabData.confirmColab) {
        return generateColab(newData)
        } else {
-           console.log(colabData)
             return colabData;
        }
     });
@@ -82,7 +81,6 @@ const generateColab = (newData) => {
         if (colabData.confirmAddColab) {
             return generateColab(newData);
         } else {
-            console.log(newData);
             return newData;
         }
     })
