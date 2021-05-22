@@ -1,25 +1,32 @@
 
-# sadf
+# titan 7
 
 ## Description
-_asdf_
-asdf
+_http:// dogeball_
+sdfgsdffg
 
-## Table of Contents
+## Table of contents
+* [stealth](#stealth)
+* [fight](#fight)
 
 
 ## Install
 
-undefined
+sdfasdfas
 
 ## Usage
 
-undefined
+ssdg
 
 ## Credits
+* derek
+ _http_
+* ergo
+ _dsafsd_
 
 
-
+## License
+ *ISC
 
 ## Badges
 

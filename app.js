@@ -5,7 +5,8 @@ const { promptTable, generateTable } = require('./develop/generate-table');
 const { promptColab, generateColab } = require('./develop/generate-colab');
 const { license } = require('./Develop/generate-license');
 // const {badgePrompt, generateBadge} = require('./develop/generate-badge');
-const { READMEfile } = require('./Develop/readme-template')
+const { READMEfile } = require('./Develop/readme-template');
+const { geninst } = require('./Develop/generate-instruction');
 
 
 // TODO: Create an array of questions for user input
@@ -67,12 +68,6 @@ const promptUser = readmeData => {
             name: 'descrip',
             message: 'Please povide a description of your project!'
         },
-        // install instructions section
-        {
-            type: 'input',
-            name: 'install',
-            message: 'Please provide any special install instructions for your application!'
-        },
         
         // usage section
         {
@@ -114,7 +109,7 @@ promptUser()
         // .then(readmeData => {
         // const readmePage = generateReadme(readmeData);
 
-promptUser()
-    .then(readmeData => {
-        await readmeData => promptTable(readmeData)
-    })
+// promptUser()
+//     .then(readmeData => {
+//         await readmeData => promptTable(readmeData)
+//     })
