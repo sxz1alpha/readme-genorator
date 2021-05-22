@@ -12,6 +12,12 @@ const READMEfile = projectData => {
     let usageMarkdown = '';
 
     //if these blocks of data are present these statments creat the sections and underlying items.
+    if (projectData.deployedLink) {
+        deployedLink = `_${projectData.deployedLink}_`
+    } else {
+        deployedLink = '';
+    }
+    
     if (projectData.license) {
         license = '## License'
         projectData.license.forEach(element => {
@@ -86,7 +92,7 @@ return `
 ${table}
 ${tableMarkdown}
 ## Description
-_${projectData.deployedLink}_
+${deployedLink}
 ${projectData.descrip}
 ${install}
 ${installMarkdown}

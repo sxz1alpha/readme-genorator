@@ -1,21 +1,27 @@
 
-# q3eertwu
+# Readme Generator
 
 ## Table of Contents
-* [werg](#werg)
+* [Description](#Description)
+* [install](#install)
+* [Usage](#Usage)
 
 ## Description
-_werg_
-werg
+A Readme generator that dyanmically creats professional readme files for developers!
+
 ## Install Instructions!
-* werg
+* Download and install the latest version of Node.js.
+* install NPM inquirer.
 
 ## Usage Instructions!
-* wergewr
+* Open command prompt window in the Readme generators root directory.
+* Type "node app" and press enter.
+* Follow the prompts.
+* Enjoy your professionally formatted Readme.md file!
 
 ## Credits
-* werg
- _werg_
+* Adrian Ulibarri
+ _sxz1alpha@github.io_
 
 ## License
 * MIT 

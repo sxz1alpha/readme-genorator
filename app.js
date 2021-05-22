@@ -94,12 +94,3 @@ promptUser()
 .then(colabData =>  license(colabData))
 // .then(licenseData => badgePrompt(licenseData))
 .then(readmeData => writeToFile('Readme.md', READMEfile(readmeData)))
-// .then(colabData => license(colabData))
-   // .then(licenseData => badgePrompt(licenseData))
-        // .then(readmeData => {
-        // const readmePage = generateReadme(readmeData);
-
-// promptUser()
-//     .then(readmeData => {
-//         await readmeData => promptTable(readmeData)
-//     })
