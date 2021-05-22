@@ -4,9 +4,11 @@ const fs = require('fs');
 const { promptTable, generateTable } = require('./develop/generate-table');
 const { promptColab, generateColab } = require('./develop/generate-colab');
 const { license } = require('./Develop/generate-license');
-// const {badgePrompt, generateBadge} = require('./develop/generate-badge');
+const {badgePrompt, generateBadge} = require('./develop/generate-badge');
 const { READMEfile } = require('./Develop/readme-template');
-const { geninst } = require('./Develop/generate-instruction');
+const { promptInst } = require('./Develop/generate-instruction');
+const { promptUsage } = require('./Develop/generate-usage');
+
 
 
 // TODO: Create an array of questions for user input
@@ -67,21 +69,7 @@ const promptUser = readmeData => {
             type: 'input',
             name: 'descrip',
             message: 'Please povide a description of your project!'
-        },
-        
-        // usage section
-        {
-            type: 'input',
-            name: 'usage',
-            message: 'Please provide instructions on how to use your application! (required)',
-            validate: usage => {
-                if (usage) {
-                    return true;
-                } else {
-                    return false;
-                }
-            }
-        },
+        },        
     ])          
 };
 
@@ -100,9 +88,11 @@ function writeToFile(projectName, data) {
 
 promptUser()
 .then(readmeData =>  promptTable(readmeData))
-.then(tableData =>  promptColab(tableData))
+.then(tableData => promptInst(tableData))
+.then(instData => promptUsage(instData))
+.then(usageData =>  promptColab(usageData))
 .then(colabData =>  license(colabData))
-// .then(licenseData => READMEfile(licenseData))
+// .then(licenseData => badgePrompt(licenseData))
 .then(readmeData => writeToFile('Readme.md', READMEfile(readmeData)))
 // .then(colabData => license(colabData))
    // .then(licenseData => badgePrompt(licenseData))

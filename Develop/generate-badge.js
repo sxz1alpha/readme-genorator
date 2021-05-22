@@ -38,7 +38,7 @@ const generateBadge = (newData) => {
             type: 'checkbox',
             name: 'badge',
             message: 'Please select the badge(s) you would like to add!',
-            choices: ['','',''],
+            choices: ['https://img.shields.io/badge/Kid%20Tested-Mother%20approved!-green','',''],
         }
     ])
     .then(badgeData => {

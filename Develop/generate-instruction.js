@@ -11,7 +11,7 @@ const promptInst = (currentData) => {
         {
             type: 'confirm',
             name: 'confirmInst',
-            message: 'Would you like to add instructions for your project?',
+            message: 'Would you like to add instructions on how to install your project?',
             default: true,
         },  
     ])
